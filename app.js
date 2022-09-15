@@ -211,6 +211,12 @@ button.addEventListener('click', function() {
         let tangkapData = new ObjData();
         console.log(tangkapData);
 
+        nama.value = "";
+        email.value = "";
+        phone.value = "";
+        subject.value = "";
+        message.value = "";
+
         let a = document.createElement('a');
         a.href = `https://mail.google.com/mail/?view=cm&fs=1&to=${email.value}&su=${subject.value}&body=Halo, saya ${nama.value}, ${message.value}, silahkan hubungi nomor ${phone.value}`;
         a.target = '_blank'
