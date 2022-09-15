@@ -3,6 +3,8 @@ let email = document.querySelector('.email');
 let phone = document.querySelector('.phone');
 let subject = document.querySelector('.subject');
 let message = document.querySelector('.message');
+let button = document.querySelector('.submit button');
+
 
 
 nama.addEventListener('click', function() {
@@ -27,9 +29,15 @@ nama.addEventListener('click', function() {
     nama.addEventListener('input', function() {
         if(nama.value == "") {
             nama.style.border = '2px solid red';
+            button.style.backgroundColor = '#ccc';
+            button.style.cursor = 'default';
         } else{
             nama.style.border = '2px solid rgba(0,0,0,0)';
             nama.classList.remove('pin');
+            if(nama.value != "" && email.value != "" && phone.value != "" && subject.value != "" && message.value != "") {
+                button.style.backgroundColor = '#000';
+                button.style.cursor = 'pointer';
+            }
         }
     })
 })
@@ -57,9 +65,15 @@ email.addEventListener('click', function() {
     email.addEventListener('input', function() {
         if(email.value == "") {
             email.style.border = '2px solid red';
+            button.style.backgroundColor = '#ccc';
+            button.style.cursor = 'default';
         } else{
             email.style.border = '2px solid rgba(0,0,0,0)';
             email.classList.remove('pin');
+            if(nama.value != "" && email.value != "" && phone.value != "" && subject.value != "" && message.value != "") {
+                button.style.backgroundColor = '#000';
+                button.style.cursor = 'pointer';
+            }
         }
     })
 })
@@ -87,9 +101,15 @@ phone.addEventListener('click', function() {
     phone.addEventListener('input', function() {
         if(phone.value == "") {
             phone.style.border = '2px solid red';
+            button.style.backgroundColor = '#ccc';
+            button.style.cursor = 'default';
         } else{
             phone.style.border = '2px solid rgba(0,0,0,0)';
             phone.classList.remove('pin');
+            if(nama.value != "" && email.value != "" && phone.value != "" && subject.value != "" && message.value != "") {
+                button.style.backgroundColor = '#000';
+                button.style.cursor = 'pointer';
+            }
         }
     })
 })
@@ -119,9 +139,15 @@ subject.addEventListener('click', function() {
     subject.addEventListener('input', function() {
         if(subject.value == "") {
             subject.style.border = '2px solid red';
+            button.style.backgroundColor = '#ccc';
+            button.style.cursor = 'default';
         } else{
             subject.style.border = '2px solid rgba(0,0,0,0)'
             subject.classList.remove('pin');
+            if(nama.value != "" && email.value != "" && phone.value != "" && subject.value != "" && message.value != "") {
+                button.style.backgroundColor = '#000';
+                button.style.cursor = 'pointer';
+            }
         }
     })
 })
@@ -149,18 +175,21 @@ message.addEventListener('click', function() {
     message.addEventListener('input', function() {
         if(message.value == "") {
             message.style.border = '2px solid red';
+            button.style.backgroundColor = '#ccc';
+            button.style.cursor = 'default';
         } else{
             message.style.border = '2px solid rgba(0,0,0,0)';
             message.classList.remove('pin');
+            if(nama.value != "" && email.value != "" && phone.value != "" && subject.value != "" && message.value != "") {
+                button.style.backgroundColor = '#000';
+                button.style.cursor = 'pointer';
+            }
         }
     })
 })
 
 
 
-
-
-let button = document.querySelector('.submit');
 
 button.addEventListener('click', function() {
     let nama = document.querySelector('.nama');
@@ -169,18 +198,7 @@ button.addEventListener('click', function() {
     let subject = document.querySelector('.subject');
     let message = document.querySelector('.message');
 
-    // if(nama.value == "") {
-    //     alert('nama wajib diisi')
-    // } else if(email.value == "") {
-    //     alert('email wajib diisi')
-    // } else if(phone.value == "") {
-    //     alert('phone wajib diisi')
-    // } else if(subject.value == "") {
-    //     alert('subject wajib diisi')
-    // } else if(message.value == "") {
-    //     alert('message wajib diisi')
-    // }
-
+    
     function ObjData() {
         this.nama = nama.value;
         this.email = email.value;
@@ -201,6 +219,4 @@ button.addEventListener('click', function() {
         alert('Semua field wajib diisi');
     }
 
-    // let emailReceiver = 'Javascript@js.com'
-    
 })
