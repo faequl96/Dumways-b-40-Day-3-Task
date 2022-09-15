@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url(font/roboto-regular-webfont.woff);
+}
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url(font/roboto-bold-webfont.woff);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    font-family: Roboto-regular;
+    background-color: rgb(213, 220, 224);
+}
+
+nav {
+    width: 100vw;
+    background-color: rgb(251, 251, 251);
+}
+
+.kotakNav {
+    max-width: 1080px;
+    min-width: 900px;
+    margin: 0 auto;
+    padding: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(251, 251, 251);
+}
+
+.navigasi {
+    width: 80%;
+}
+
+.navigator {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.navigator li {
+    margin: 0 50px 0 0;
+}
+
+.navigator li a {
+    color: #333;
+    font-size: 1.2rem;
+}
+
+.navigator li:nth-child(1) a {
+    display: block;
+    width: 44px;
+    background-color: rgb(234, 226, 8);
+}
+
+.navigator li:nth-child(2) a {
+    font-family: Roboto-bold;
+    font-weight: 900;
+}
+
+
+.navigator li:nth-child(3) {
+    width: 100px;
+}
+
+.logo {
+    width: 40px;
+}
+
+.contact {
+    display: flex;
+    flex: 50%;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.contact div {
+    background-color: #333;
+    padding: 6px 16px;
+    border-radius: 8px;
+}
+
+.contact div a {
+    color: white;
+}
